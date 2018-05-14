@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'helloworld',
-    'playg1.imageupload'
+    'imageupload'
 ]
 
 MIDDLEWARE_CLASSES = [
