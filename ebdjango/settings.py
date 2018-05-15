@@ -143,7 +143,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 
 AWS_STORAGE_BUCKET_NAME = 'ca-project-image-bucket'
-AWS_S3_REGION_NAME = 's3-website-ap-southeast-1'  # e.g. us-east-2
+AWS_S3_REGION_NAME = 'ap-southeast-1'  # e.g. us-east-2
 AWS_ACCESS_KEY_ID = 'AKIAJG3HV2GKXEOFSJTA'
 AWS_SECRET_ACCESS_KEY = '7LA6xtFy03c3dgGuuUqr1s75+0GUX78nKt4JdxAI'
 
