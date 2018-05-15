@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+  {% load staticfiles %}
   <head>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.238.1.min.js"></script>
     <!-- <script src="./app.js"></script> -->
-    {% load static %}
-    <script src="{% static 'imageupload/app.js' %}"></script>
+    <!--{% load static %}-->
+    <script src="{% static 'imageupload/js/app.js' %}"></script>
     <script>
        function getHtml(template) {
           return template.join('\n');
