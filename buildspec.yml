@@ -18,6 +18,7 @@ artifacts:
     - 'ebdjango/**/*'
     - 'helloworld/**/*'
     - 'imageupload/**/*'
+    - 'custom_storages.py'
     - 'landing/**/*'
     - 'manage.py'
     - 'requirements.txt'
