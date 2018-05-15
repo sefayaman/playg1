@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'helloworld.apps.HelloworldConfig',
     'imageupload.apps.ImageuploadConfig',
-    'landing',
+    'landing.apps.LandingConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
