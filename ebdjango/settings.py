@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'helloworld',
-    'imageupload'
+    'helloworld.apps.HelloworldConfig',
+    'imageupload.apps.ImageuploadConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
