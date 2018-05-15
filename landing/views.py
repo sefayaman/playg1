@@ -8,4 +8,4 @@ from django.views.generic import TemplateView
 class landingview(TemplateView):
     def get(self, request, **kwargs):
         # pdb.set_trace()
-        return render(request, 'index.html', context=None)
+        return render(request, 'landing.html', context=None)
