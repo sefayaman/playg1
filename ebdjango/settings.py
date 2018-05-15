@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'helloworld.apps.HelloworldConfig',
     'imageupload.apps.ImageuploadConfig',
     'landing.apps.LandingConfig',
+    'storages'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -121,5 +122,34 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT = 'static'
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+
+
+# AWS S3 Parameters
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+
+AWS_STORAGE_BUCKET_NAME = 'ca-project-image-bucket'
+AWS_S3_REGION_NAME = 's3-website-ap-southeast-1'  # e.g. us-east-2
+AWS_ACCESS_KEY_ID = 'AKIAJG3HV2GKXEOFSJTA'
+AWS_SECRET_ACCESS_KEY = '7LA6xtFy03c3dgGuuUqr1s75+0GUX78nKt4JdxAI'
+
+# Tell django-storages the domain to use to refer to static files.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
+# you run `collectstatic`).
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
