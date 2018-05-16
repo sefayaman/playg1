@@ -4,5 +4,6 @@ from django.conf.urls.static import static
 from landing import views
 
 urlpatterns = [
-    url(r'^$', views.landingview.as_view(),name='home'),
+    url(r'^$', views.signinview.as_view(),name='signin'),
+    url(r'^landing', views.landingview.as_view(),name='landing'),
 ]
